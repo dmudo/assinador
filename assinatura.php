@@ -36,7 +36,7 @@ $departamento8 = isset( $_POST['departamento8'])? $_POST['departamento8']:"";
 ?>
 
 
-<form action="assinaturaphp.php" method="post" id="assineForm">
+<form action="assinaturapost.php" method="post" id="assineForm">
 
 <label for="nome"><h3>Nome completo:<h3></label>
 <input name="nome" type="text" value="<?php echo $nome ?>" size="30" maxlength="30">
