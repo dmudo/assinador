@@ -4,8 +4,8 @@
   <title>Assinatura de E-mail Tropicalpneus</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="imagens/favicon.ico">
-  <link href="css/assinatura.min.css" rel="stylesheet" type='text/css'> 
+  <link rel="icon" href="#">
+  <link href="assinatura.min.css" rel="stylesheet" type='text/css'> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     
