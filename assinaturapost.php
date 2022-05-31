@@ -5,7 +5,7 @@ header('Content-Disposition: form-data; filename="assinatura.jpeg"');
 
 
 // Carregar imagem já existente no servidor
-$im = imagecreatefromjpeg( "imagens/assinatura.jpeg" );
+$im = imagecreatefromjpeg( "assinatura.jpeg" );
 /* @Parametros
  * "foto.jpg" - Caminho relativo ou absoluto da imagem a ser carregada.
  */
@@ -61,5 +61,6 @@ imagejpeg( $imagem, NULL, 100 );
           Se não definido NULL a imagem será mostrado no browser.
  * 80 - Qualidade da compresão da imagem.
  */
+
 
 
