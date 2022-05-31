@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-
 <head>
   <title>Assinatura de E-mail Tropicalpneus</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -9,14 +8,13 @@
   <link href="css/assinatura.min.css" rel="stylesheet" type='text/css'> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  
-  
-  
+    
 </head>
 <body>
 
 <h2>GERADOR DE ASSINATURA DE E-MAIL</h2>
 <h2>TROPICAL PNEUS</h2>
+<p>ATENÇÃO: Resolução mínima recomendada para abrir essa pagina 1280x720</p>
 
 <div id="container" style="width:60%;">                                   
 <div id="left" style="float:left; width:37%;">
@@ -110,12 +108,12 @@ $departamento8 = isset( $_POST['departamento8'])? $_POST['departamento8']:"";
     
     <script type="text/javascript">
       $(document).ready(function() {
-      $('#Assitente').hide();
+      $('#Assistente').hide();
       $('#totaldep').change(function() {
-      if ($('#totaldep').val() == 'Assitente*') {
-      $('#Assitente').show();
+      if ($('#totaldep').val() == 'Assistente*') {
+      $('#Assistente').show();
       } else {
-      $('#Assitente').hide();
+      $('#Assistente').hide();
           }
       });
       });
@@ -216,7 +214,7 @@ $departamento8 = isset( $_POST['departamento8'])? $_POST['departamento8']:"";
 <select id="totaldep" name="totaldep">
       <option style="display:none">
       <option value="Analistas*">Analistas</option>
-      <option value="Assitente*">Assistente</option>
+      <option value="Assistente*">Assistente</option>
       <option value="Auxiliar*">Auxiliar</option>
       <option value="Diretor*">Diretor</option>
       <option value="Estoquista*">Estoquista</option>
@@ -258,17 +256,17 @@ $departamento8 = isset( $_POST['departamento8'])? $_POST['departamento8']:"";
       </select>
 </div>
 
-<div id="Assitente">
+<div id="Assistente">
   <label for="Cargo">Cargo:</label>
       <select id="departamento1" name="departamento1" >
           <option style="display:none">
-          <option value="Assitente Compras">Assitente Compras</option>
-          <option value="Assitente Crédito">Assitente Crédito</option>
-          <option value="Assitente Escrita Fiscal">Assitente Escrita Fiscal</option>
-          <option value="Assitente Serv. Adm. Aprend">Assitente Serv. Adm. Aprend</option>
-          <option value="Assitente Dep. Pessoal">Assitente Dep. Pessoal</option>
-          <option value="Assitente Menor Aprendiz">Assitente Menor Aprendiz</option>
-          <option value="Assitente de T.I">Assitente de T.I</option>
+          <option value="Assistente Compras">Assistente Compras</option>
+          <option value="Assistente Crédito">Assistente Crédito</option>
+          <option value="Assistente Escrita Fiscal">Assistente Escrita Fiscal</option>
+          <option value="Assistente Serv. Adm. Aprend">Assistente Serv. Adm. Aprend</option>
+          <option value="Assistente Dep. Pessoal">Assistente Dep. Pessoal</option>
+          <option value="Assistente Menor Aprendiz">Assistente Menor Aprendiz</option>
+          <option value="Assistente de T.I">Assistente de T.I</option>
       </select>
 </div>
     
@@ -376,7 +374,6 @@ $departamento8 = isset( $_POST['departamento8'])? $_POST['departamento8']:"";
   
 <input id="submit" type="submit" value="GERAR ASSINATURA" disabled="disabled" onclick="return confirm('Conferiu todos os campos?')">
 
-
 </form>
 </div>
 </div> 
@@ -385,12 +382,23 @@ $departamento8 = isset( $_POST['departamento8'])? $_POST['departamento8']:"";
 
 <div class="assinatura">
     <img src="imagens/vendedor.jpeg">
-    
-</div>                   
-</div> 
 
+</div>
+
+<footer id="myFooter">
+ <div class="footer">
+		<p class="footer-copyright">Assinador v.1.0 - 2022</p>
+ </div>
+</footer>
+</div> 
+ 
 </body>
 </html>
+
+
+
+
+
 
 
 
