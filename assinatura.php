@@ -381,7 +381,7 @@ $departamento8 = isset( $_POST['departamento8'])? $_POST['departamento8']:"";
 <div id="right" style="float:right; width:50%;">
 
 <div class="assinatura">
-    <img src="imagens/vendedor.jpeg">
+    <img src="vendedor.jpeg">
 
 </div>
 
