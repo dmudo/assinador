@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/dmudo/assinador)
 
 # Sobre o projeto
-Gerador simples para assinaturas de email, o codigo PHP escreve na imagem conforme campos selecionado, usando dois modelos de fontes, /SegoeBold.ttf para nome e /segoe.otf para os demais campos.
+Gerador de assinaturas de email, escreve na imagem conforme campos selecionado, usando dois modelos de fontes, /SegoeBold.ttf para nome e /segoe.otf para os demais campos.
  - Verifique se a biblioteca GD esta instalada no phpinfo(); 
 
 # Tecnologias utilizadas
