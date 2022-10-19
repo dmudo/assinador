@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
+
 <head>
   <title>Assinatura de E-mail Tropicalpneus</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -14,7 +15,7 @@
 
 <h2>GERADOR DE ASSINATURA DE E-MAIL</h2>
 <h2>TROPICAL PNEUS</h2>
-<p>ATENÇÃO: Resolução mínima recomendada para abrir essa pagina 1280x720</p>
+<p>Manual para configurar a assinatura no seu email, <a href="pdf/tutorial.pdf" target="_blank">clique aqui.</a> </p>
 
 <div id="container" style="width:60%;">                                   
 <div id="left" style="float:left; width:37%;">
