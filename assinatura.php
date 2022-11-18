@@ -9,14 +9,19 @@
   <link href="assinatura.min.css" rel="stylesheet" type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- Fonte do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet" </head>
 
-</head>
 
 <body>
 
-  <h2>GERADOR DE ASSINATURA DE E-MAIL</h2>
-  <h2>TROPICAL PNEUS</h2>
-  <p>Manual para configurar a assinatura no seu email, <a href="pdf/tutorial.pdf" target="_blank">clique aqui.</a> </p>
+  <div class="titulo">
+    <h1>GERADOR DE ASSINATURA DE E-MAIL</h1>
+    <h2>TROPICAL PNEUS</h2>
+    <p>Manual para configurar a assinatura no seu email, <a href="pdf/tutorial.pdf" target="_blank">clique aqui.</a> </p>
+  </div>
 
   <div id="container" style="width:60%;">
     <div id="left" style="float:left; width:37%;">
@@ -41,12 +46,33 @@
       <form action="assinaturapost.php" method="post" id="assineForm">
 
         <label for="nome">
-          <h3>Nome completo:<h3>
+          <h2>Nome Completo </h2>
         </label>
         <input name="nome" type="text" value="<?php echo $nome ?>" size="30" maxlength="30" id="placeNome" placeholder="Seu Nome...">
 
-        <label for="celular">Celular Corporativo:</label>
-        <input name="celular" type="text" value="<?php echo $celular ?>" size="18" maxlength="33" placeholder="(DD)99999-9999" />
+        <label for="celular">
+          <h2>Celular Corporativo:</h2>
+        </label>
+        <input name="celular" type="text" value="<?php echo $celular ?>" size="18" id="phoneNumber" maxlength="33" />
+
+        <label for="telefone">
+          <h2>Telefones:</h2>
+        </label>
+        <select id="totaltel" name="totaltel">
+          <option style="display:none">
+          <option value=""></option>
+          <option value="fixolojas*">Fixo Lojas*</option>
+        </select>
+
+        <div id="fixolojas">
+          <label for="Fixoslojas">Região:</label>
+          <select id="departamento0" name="departamento0">
+            <option style="display:none">
+            <option value=""></option>
+            <option value="(62) 3243-5000">Goias</option>
+            <option value="(65) 3319-6000">Mato Grosso</option>
+          </select>
+        </div>
 
         <script type="text/javascript">
           var inputs = $("form#assineForm input, form#assineForm textarea");
@@ -80,21 +106,6 @@
             });
           });
         </script>
-
-        <label for="telefone">Telefones:</label>
-        <select id="totaltel" name="totaltel">
-          <option style="display:none">
-          <option value="fixolojas*">Fixo Lojas*</option>
-        </select>
-
-        <div id="fixolojas">
-          <label for="Fixoslojas">Região:</label>
-          <select id="departamento0" name="departamento0">
-            <option style="display:none">
-            <option value="(62)3243-5000">Goias</option>
-            <option value="(65) 3319-6000">Mato Grosso</option>
-          </select>
-        </div>
 
         <script type="text/javascript">
           $(document).ready(function() {
@@ -212,7 +223,7 @@
             });
           });
         </script>
-        
+
         <!-- Colocar o focus no campo nome ao abrir a pagian -->
         <script>
           $(document).ready(function() {
@@ -220,9 +231,80 @@
           });
         </script>
 
-        <label for="Hierarquia">Hierarquia:</label>
+        <!-- Colocar parenteses no DD e formatar o numero conforme usuario digita -->
+        <script>
+          const isNumericInput = (event) => {
+            const key = event.keyCode;
+            return ((key >= 48 && key <= 57) || //Permitir linha numérica
+              (key >= 96 && key <= 105) // Permitir Teclado Numerico
+            );
+          };
+
+          const isModifierKey = (event) => {
+            const key = event.keyCode;
+            return (event.shiftKey === true || key === 35 || key === 36) || // Permitir Shift, Home, End
+              (key === 8 || key === 9 || key === 13 || key === 46) || // Permitir Backspace, Tab, Enter, Excluir
+              (key > 36 && key < 41) || // Permitir esquerda, cima, direita, baixo
+              (
+                // Permitir Ctrl/Comando + A,C,V,X,Z
+                (event.ctrlKey === true || event.metaKey === true) &&
+                (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
+              )
+          };
+
+          const enforceFormat = (event) => {
+            // A entrada deve ter um formato de número válido ou uma tecla modificadora e não ter mais de dez dígitos
+            if (!isNumericInput(event) && !isModifierKey(event)) {
+              event.preventDefault();
+            }
+          };
+
+          const formatToPhone = (event) => {
+            if (isModifierKey(event)) {
+              return;
+            }
+
+            const target = event.target;
+            const input = event.target.value.replace(/\D/g, '').substring(0, 11); //Apenas os primeiros 11 dígitos da entrada (62)98415-3899
+            const zip = input.substring(0, 2);
+            const middle = input.substring(2, 7);
+            const last = input.substring(7, 11);
+
+            if (input.length > 7) {
+              target.value = `(${zip}) ${middle}-${last}`;
+            } else if (input.length > 2) {
+              target.value = `(${zip}) ${middle}`;
+            } else if (input.length > 0) {
+              target.value = `(${zip}`;
+            }
+          };
+
+          const inputElement = document.getElementById('phoneNumber');
+          inputElement.addEventListener('keydown', enforceFormat);
+          inputElement.addEventListener('keyup', formatToPhone);
+        </script>
+
+        <script>
+          document.getElementById("totaldep").onchange = changeListener;
+
+          function changeListener() {
+            var value = this.value
+            console.log(value);
+
+            if (value == "min") {
+              window.location.reload();
+            } 
+
+          }
+        </script>
+
+        <!-- Caixas de escolhas do Cargo -->
+        <label for="Hierarquia">
+          <h2>Hierarquia:</h2>
+        </label>
         <select id="totaldep" name="totaldep">
           <option style="display:none">
+          <option value="min">Branco</option>
           <option value="Analistas*">Analistas</option>
           <option value="Assistente*">Assistente</option>
           <option value="Auxiliar*">Auxiliar</option>
@@ -397,7 +479,7 @@
 
     <footer id="myFooter">
       <div class="footer">
-        <p class="footer-copyright">Assinador v.1.0 - 2022</p>
+        <p class="footer-copyright">Assinador v.1.4 - 2022</p>
       </div>
     </footer>
   </div>
