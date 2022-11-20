@@ -60,15 +60,14 @@
         </label>
         <select id="totaltel" name="totaltel">
           <option style="display:none">
-          <option value=""></option>
-          <option value="fixolojas*">Fixo Lojas*</option>
+          <option value="">Em Branco</option>
+          <option value="fixolojas*">Fixo Lojas</option>
         </select>
 
         <div id="fixolojas">
-          <label for="Fixoslojas">Região:</label>
+          <label for="Fixoslojas"><h2>Região:</h2></label>
           <select id="departamento0" name="departamento0">
             <option style="display:none">
-            <option value=""></option>
             <option value="(62) 3243-5000">Goias</option>
             <option value="(65) 3319-6000">Mato Grosso</option>
           </select>
@@ -304,7 +303,7 @@
         </label>
         <select id="totaldep" name="totaldep">
           <option style="display:none">
-          <option value="min">Branco</option>
+          <option value="">Em Branco</option>
           <option value="Analistas*">Analistas</option>
           <option value="Assistente*">Assistente</option>
           <option value="Auxiliar*">Auxiliar</option>
@@ -317,7 +316,7 @@
         </select>
 
         <div id="Analista">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento" name="departamento">
             <option style="display:none">
             <option value="Analista Administrativo">Analista Administrativo</option>
@@ -349,7 +348,7 @@
         </div>
 
         <div id="Assistente">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento1" name="departamento1">
             <option style="display:none">
             <option value="Assistente Compras">Assistente Compras</option>
@@ -363,7 +362,7 @@
         </div>
 
         <div id="Auxiliar">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento2" name="departamento2">
             <option style="display:none">
             <option style="Auxiliar Faturamento">Auxiliar Faturamento</option>
@@ -387,7 +386,7 @@
         </div>
 
         <div id="Diretor">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento8" name="departamento8">
             <option style="display:none">
             <option style="Diretor Comercial">Diretor Comercial</option>
@@ -400,7 +399,7 @@
         </div>
 
         <div id="Estoquista">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento6" name="departamento6">
             <option style="display:none">
             <option style="Estoquista Loja">Estoquista Loja</option>
@@ -409,7 +408,7 @@
         </div>
 
         <div id="Supervisor">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento5" name="departamento5">
             <option style="display:none">
             <option style="Supervisor">Supervisor de Informatica</option>
@@ -417,7 +416,7 @@
         </div>
 
         <div id="Tecnico">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento4" name="departamento4">
             <option style="display:none">
             <option style="Tecnico de Informatica">Técnico de Informatica</option>
@@ -431,7 +430,7 @@
         </div>
 
         <div id="Gerente">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento3" name="departamento3">
             <option style="display:none">
             <option style="Gerente de T.I">Gerente de T.I</option>
@@ -452,7 +451,7 @@
         </div>
 
         <div id="Vendas">
-          <label for="Cargo">Cargo:</label>
+          <label for="Cargo"><h2>Cargo:</h2></label>
           <select id="departamento7" name="departamento7">
             <option style="display:none">
             <option style="Vendendor">Vendendor</option>
